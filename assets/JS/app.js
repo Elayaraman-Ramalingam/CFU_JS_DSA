@@ -5,7 +5,6 @@ function charLength() {
     let charLength = document.getElementById('length').value;
     document.getElementById('result').innerHTML = charLength;
     n = charLength;
-    console.log(n); 
     if(charLength == 0 ){
         document.getElementById('btn').setAttribute('disabled', 'disabled');
     }
@@ -29,7 +28,7 @@ const symcheck = document.getElementById("symbols");
 const small = "abcdefghijklmnopqrstuvwxyz";
 const large = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 const numbers = "0123456789";
-const symbols = "!@#$%^&*()_+-=?|\/~`.,<>"
+const symbols = "!@#$%^&*()_+-=?|\/~`.,<>;:'{}[] "
 
 function printPasswd(){
 
