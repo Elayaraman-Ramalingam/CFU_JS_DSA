@@ -1,7 +1,11 @@
-let n = 0;
 
+
+let n = 0;
 /*get the number of characters*/
 function charLength() {
+
+    document.getElementById('password__result').value = "";
+
     let charLength = document.getElementById('length').value;
     document.getElementById('result').innerHTML = charLength;
     n = charLength;
@@ -32,6 +36,8 @@ const symbols = "!@#$%^&*()_+-=?|\/~`.,<>;:'{}[] "
 
 function printPasswd(){
 
+    outputNum.innerHTML = 0;
+
     let Lval = "", Sval = "" , nval = "" , sval = "";
 
     if(Largecheck.checked == true){
@@ -55,5 +61,26 @@ function printPasswd(){
             str += value.charAt(Math.floor(Math.random()*length)); ;
         }
     document.getElementById('password__result').value = str;
+
+    showStrength();
+
+    function showStrength(){
+        if(str.length > 0){
+            outputNum.innerHTML = 1;
+        }
+        if(str.length > 5){
+            outputNum.innerHTML = 2;
+        }
+        if(str.length > 10){
+            outputNum.innerHTML = 3;
+        }
+        if(str.length > 15){
+            outputNum.innerHTML = 4;
+        }
+    }
 }
+
+let outputNum = document.getElementById('outputNum')
+
+
 
